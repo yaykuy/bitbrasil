@@ -1,0 +1,56 @@
+
+Wallet GUID: 1cca440a-35ac-454f-a11d-e358fb5f6447
+Password: bitbrasil2014
+
+http://yaykuy-bitbrasil.herokuapp.com/link?fan=<pepe> <-QR para imprimir 
+
+
+Busca la direccion de pepe_charity en el wallet:
+https://blockchain.info/merchant/$guid/list?password=$main_password
+
+
+Genera una direccion de pago para la direccion pepe_charity con:
+https://blockchain.info/api/receive?method=create&address=$receiving_address&callback=http://bitbrasil.herokuapp.com/callback
+
+Despliega un html con chachara + un qr con el bitcoinaddress de pago. y un boton de continuar (para presionar despues de hacer el pago, que lleva a http://bitbrasil.herokuapp.com/postpago
+
+QR se hace con http://chart.apis.google.com/chart?cht=qr&chs=200x200&chl=<dir de pago>
+
++http://bitbrasil.herokuapp.com/callback
+Esto lo llama blockchain.info para avisar que llego un pago
+Parameters
+
+    -value The value of the payment received in satoshi (not including fees). Divide by 100000000 to get the value in BTC.
+    -transaction_hash The transaction hash.
+    -input_address The bitcoin address that received the transaction.
+    -confirmations The number of confirmations of this transaction.
+
+Cuando llega el pago, se hace una transaccion 30% para el fan y 70% para el charity
+con 
+https://blockchain.info/merchant/$guid/sendmany?password=$main_password&second_password=$second_password&recipients=$recipients&shared=$shared&fee=$fee
+
+donde from es la direccion pepe_charity
+
++http://bitbrasil.herokuapp.com/postpago
+
+muestra el saldo y las ultimas transacciones de la direccion charity con:
+
+http://blockchain.info/address/<direccion del charity>?format=json
+
+esta mejor:
+
+Balance
+http://btc.blockr.io/api/v1/address/info/14mK1z9VCXmpDcofzorQ7YEBJWmwYkgxD9
+
+Txs
+confirmadas:
+http://btc.blockr.io/api/v1/address/txs/14mK1z9VCXmpDcofzorQ7YEBJWmwYkgxD9
+
+no confirmadas:
+http://btc.blockr.io/api/v1/address/unconfirmed/14mK1z9VCXmpDcofzorQ7YEBJWmwYkgxD9
+
+
+
+
+
+
