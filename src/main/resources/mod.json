@@ -1,0 +1,6 @@
+{
+  "main": "app.js",
+  "includes": "com.jetdrone~yoke~1.0.7,com.jetdrone~yoke-extras~1.0.7",
+
+  "auto-redeploy": true
+}

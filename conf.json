@@ -1,0 +1,15 @@
+// Application config
+{
+    "serverConfig": {
+        // Config for server verticle
+    },
+    "mongoConfig": {
+        // Config for mongo module (dev)
+        "address"  : "mongo",
+		"host"     : "ds033477.mongolab.com",
+		"port"     : 33477,
+		"db_name"  : "bitbrasil-dev",
+		"username" : "bitbrasil",
+		"password" : "b1tc01n_p0w3r"
+    }
+}
