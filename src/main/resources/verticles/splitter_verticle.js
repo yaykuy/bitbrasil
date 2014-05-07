@@ -14,17 +14,30 @@
 * limitations under the License.
 */
 
+//Splitter
+//Verticle que reparte lo donado al poster entre el charity y el fan
+
 var vertx     = require('vertx');
 var container = require('vertx/container');
 
-var appConfig = container.config;
+var logger 	  = container.logger;
+var config    = container.config;
 
-//Modulo de acceso a mongo
-container.deployModule('io.vertx~mod-mongo-persistor~2.0.0-final',appConfig.mongoConfig);
+var busAddr  = config.bus_address
 
-//Verticle que reparte lo donado al poster entre el charity y el fan
-container.deployVerticle('verticles/splitter_verticle.js', appConfig.splitterConfig);
+var eb = vertx.eventBus;
 
-//Verticle que sirve los http. En Yoke
-container.deployVerticle('cl.yaykuy.bitbrasil.Server', appConfig.serverConfig);
+eb.registerHandler(busAddr+'.split', doSplit);
 
+function doSplit (message, replier) {
+
+	//TODO: Implement REAL Split
+
+	return replier({
+      status  : "ok"
+  	});
+
+}
+
+
+logger.info("Splitter Verticle Ready to Rock on "+busAddr);

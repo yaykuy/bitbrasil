@@ -4,6 +4,10 @@ Bitcoin en Brasil
 
 (no estoy mas inspirado :( )
 
+
+[![Build Status](https://travis-ci.org/yaykuy/bitbrasil.svg?branch=master)](https://travis-ci.org/yaykuy/bitbrasil)
+
+
 ### Ejecutar
 
 ````sh

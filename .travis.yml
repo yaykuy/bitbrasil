@@ -1,0 +1,4 @@
+language: java
+
+script:
+  - TERM=dumb ./gradlew test

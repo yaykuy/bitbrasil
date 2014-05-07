@@ -11,5 +11,9 @@
 		"db_name"  : "bitbrasil-dev",
 		"username" : "bitbrasil",
 		"password" : "b1tc01n_p0w3r"
+    },
+    "splitterConfig": {
+        // Config for splitter verticle
+        "bus_address" : "splitter"
     }
 }
