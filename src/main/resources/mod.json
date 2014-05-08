@@ -2,5 +2,6 @@
   "main": "app.js",
   "includes": "com.jetdrone~yoke~1.0.7,com.jetdrone~yoke-extras~1.0.7",
 
+  "deploy" : "io.vertx~lang-rhino~2.0.0-final,io.vertx~mod-mongo-persistor~2.0.0-final",
   "auto-redeploy": true
 }
