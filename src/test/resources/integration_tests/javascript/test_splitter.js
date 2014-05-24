@@ -22,12 +22,16 @@ var console = require("vertx/console");
 
 var eb = vertx.eventBus;
 
-function testSplit() {
+function _testSplit() {
   eb.send('splitter.split', {}, function(reply) {
       //console.log("testSplit reply:"+JSON.stringify(reply,null,4));
       vassert.assertEquals('ok', reply.status);
       vassert.testComplete();
     });
+}
+
+function testMula(){
+	vassert.testComplete();
 }
 
 var script = this;

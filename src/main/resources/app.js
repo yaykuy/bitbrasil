@@ -82,7 +82,7 @@ function deployAllVerticles(){
 		    }
 		  } else {
 		    console.log("Deployment failed! " + err.getMessage());
-			err.printStacktrace()
+			//err.printStacktrace()
 		  }
 	}
 }
