@@ -1,19 +1,45 @@
 // Application config
 {
-    "serverConfig": {
-        // Config for server verticle
+    //Module and Verticle loading config
+    "appConfig" :{
+        //Module loading        
+        "modules" :{
+            "mongo": {
+                "module"    : "io.vertx~mod-mongo-persistor~2.0.0-final"
+            }
+        },
+        //Own verticles loading
+        "verticles" : {
+            "splitter"     : {},
+            "charity"      : {}
+        },
+        //Last verticle to start. Server verticle
+        "serverVerticle"    : "server"
     },
-    "mongoConfig": {
-        // Config for mongo module (dev)
+
+    //Mongo de desarrollo
+    "mongo"  : {
         "address"  : "mongo",
-		"host"     : "ds033477.mongolab.com",
-		"port"     : 33477,
-		"db_name"  : "bitbrasil-dev",
-		"username" : "bitbrasil",
-		"password" : "b1tc01n_p0w3r"
+        "host"     : "ds033477.mongolab.com",
+        "port"     : 33477,
+        "db_name"  : "bitbrasil-dev",
+        "username" : "bitbrasil",
+        "password" : "b1tc01n_p0w3r"
     },
-    "splitterConfig": {
+    "splitter" : {
         // Config for splitter verticle
         "bus_address" : "splitter"
+    },
+    "charity" : {
+        // Config for splitter verticle
+        "bus_address" : "charity"
+    },
+    "fan" : {
+        // Config for splitter verticle
+        "bus_address" : "fan"
+    },
+    "server" : {
+        // Config for server verticle
+        "file" : "cl.yaykuy.bitbrasil.YokeServer"
     }
 }

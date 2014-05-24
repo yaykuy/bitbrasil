@@ -30,12 +30,51 @@ var eb = vertx.eventBus;
 eb.registerHandler(busAddr+'.split', doSplit);
 
 function doSplit (message, replier) {
+	logger.info("Splitting address:"+message.address
+		+" ["+message.confirmations+"]");
 
-	//TODO: Implement REAL Split
+	if(message.confirmations < 1){
+		return replier({
+	      status  : "not enough confirmations"
+	  	});
+	}
 
-	return replier({
-      status  : "ok"
-  	});
+	//Vamos a ver de quien es la address.
+	var mongoMessage = {
+	    action     : 'findone',
+	    collection : 'fans',
+	    matcher    : {
+	    	'poster.address': message.address
+	    }
+	};
+
+	eb.send('mongo', mongoMessage, gotMongoReply);
+
+	function gotMongoReply(mongoReply){
+		if (mongoReply.status != 'ok') {
+      		logger.info("error in geting fan (mongo): " + JSON.stringify(mongoReply) );
+      		return replier({
+		      status  : "error in geting fan (mongo)"+mongoReply.status
+		  	});
+    	} else if(mongoReply.status == 'ok' && !mongoReply.result) {
+    		logger.info("not a single fan found in mongo");
+      		return replier({
+		      status  : "not a single fan found in mongo"
+		  	});
+    	} else {
+	      	var fan=mongoReply.result
+	      	logger.info("fan founded in mongo): " + JSON.stringify(fan) );
+
+
+	      	return replier({
+		      status  : "ok"
+		  	});
+	    }
+
+	}
+
+	
+
 
 }
 

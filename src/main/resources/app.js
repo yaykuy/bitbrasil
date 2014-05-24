@@ -16,15 +16,103 @@
 
 var vertx     = require('vertx');
 var container = require('vertx/container');
+var console = require('vertx/console');
 
 var appConfig = container.config;
+var config = appConfig.appConfig;
 
-//Modulo de acceso a mongo
-container.deployModule('io.vertx~mod-mongo-persistor~2.0.0-final',appConfig.mongoConfig);
+var modules	= (config.modules?config.modules:{});
+var verticles = (config.verticles?config.verticles:{});
+var serverVerticle = (config.serverVerticle?config.serverVerticle:'');
+var address = (config.address?config.address:'');
 
-//Verticle que reparte lo donado al poster entre el charity y el fan
-container.deployVerticle('verticles/splitter_verticle.js', appConfig.splitterConfig);
+//Cargamos los modulos
+var totalModules=Object.keys(modules).length;
+if(totalModules==0){
+	deployAllVerticles()
+}else{
+	var loadedModules=0;
+	for(var i in modules){
+		var moduleConfig=appConfig[i];
+		//console.log(i+" config:"+JSON.stringify(moduleConfig));
+		container.deployModule(modules[i].module, moduleConfig, 
+													deployedModule.bind(null,i) );
+	}
+}
 
-//Verticle que sirve los http. En Yoke
-container.deployVerticle('cl.yaykuy.bitbrasil.Server', appConfig.serverConfig);
+function deployedModule(name, err, deployId){
+	if (!err) {
+	  	loadedModules++;
+	    console.log("Module "+name+ " deployed "+loadedModules+"/"+totalModules);
+	    if(loadedModules==totalModules){
+	    	deployAllVerticles();
+	    }
+	} else {
+		console.log("Deployment failed! " + err.getMessage());
+	}
+}
 
+function deployAllVerticles(){
+	//Cargamos los verctiles
+	var totalVerticles=Object.keys(verticles).length;
+	if(totalVerticles==0){
+		deployServerVerticle();
+	}else{
+		var loadedVerticles=0;
+		for(var i in verticles){
+			var verticleConfig=appConfig[i];
+			var verticleFile;
+			if(verticles[i].file){
+				verticleFile="verticles/"+verticles[i].file
+			}else{
+				verticleFile="verticles/"+i+"_verticle.js";
+			}
+			container.deployVerticle(verticleFile, verticleConfig, 
+													deployedVerticle.bind(null, i));
+
+		}
+	}
+
+	function deployedVerticle(name, err, deployID) {
+		  if (!err) {
+		  	loadedVerticles++;
+		    console.log("Verticle "+name+ " deployed " + loadedVerticles+"/"+totalVerticles);
+		    if(loadedVerticles==totalVerticles){
+		    	deployServerVerticle();
+		    }
+		  } else {
+		    console.log("Deployment failed! " + err.getMessage());
+			err.printStacktrace()
+		  }
+	}
+}
+
+function deployServerVerticle(){
+	if(serverVerticle==''){
+		done();
+	}else{
+		var verticleConfig=appConfig[serverVerticle];
+		var verticleFile="verticles/"+serverVerticle+"_verticle.js";
+		if(verticleConfig.file!=null){
+			verticleFile=verticleConfig.file
+		}
+		container.deployVerticle(verticleFile, verticleConfig, 
+								deployedServerVerticle.bind(null, serverVerticle));
+	}
+	
+	function deployedServerVerticle(name, err, deployID) {
+	  if (!err) {
+		console.log("Verticle "+name+ " deployed.");
+	  	done();
+	  } else {
+	    console.log("Deployment failed! " + err.getMessage());
+	  }
+	}
+}
+
+function done(){
+	console.log("App Ready to Rock!");
+	if(address!=''){
+		vertx.eventBus.publish(address,"started")
+	}
+}

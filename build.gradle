@@ -57,7 +57,7 @@ dependencies {
   provided "com.foo:foo-lib:1.0.1" - if you DON'T want it to be packaged in the module zip
   */
   provided "com.jetdrone:yoke:$yokeVersion"
-  provided "com.jetdrone:yoke-extras:$yokeVersion"
+  provided "com.jetdrone:yoke.engine.handlebars:$yokeVersion"
 
   // If you're creating Groovy compiled verticles you may need the following dependencies
   //provided "org.codehaus.groovy:groovy-all:$groovyVersion"
