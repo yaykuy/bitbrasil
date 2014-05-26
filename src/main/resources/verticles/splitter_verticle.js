@@ -49,7 +49,7 @@ function doSplit (message, replier) {
 	//esto se filtra en getValueToSplit, pero bueno.
 	if(confirmations < minConfirmations){
 		return replier({
-	      status  : confirmations + "are not enough confirmations"
+	      status  : confirmations + " are not enough confirmations"
 	  	});
 	}
 

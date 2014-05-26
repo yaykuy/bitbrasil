@@ -29,7 +29,7 @@
     "splitter" : {
         // Config for splitter verticle
         "bus_address" : "splitter",
-        "min_confirmations" : 1
+        "min_confirmations" : 0
     },
     "charity" : {
         // Config for splitter verticle
