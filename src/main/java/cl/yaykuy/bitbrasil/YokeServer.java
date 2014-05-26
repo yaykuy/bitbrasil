@@ -4,10 +4,12 @@ import org.vertx.java.platform.Verticle;
 import org.vertx.java.core.Handler;
 import org.vertx.java.core.eventbus.*;
 import org.vertx.java.core.json.*;
+import org.vertx.java.core.buffer.Buffer;
 
 import com.jetdrone.vertx.yoke.Yoke;
 import com.jetdrone.vertx.yoke.middleware.*;
 import com.jetdrone.vertx.yoke.engine.*;
+
 
 import java.lang.Override;
 
@@ -15,6 +17,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
 
 public class YokeServer extends Verticle {
 
@@ -32,7 +35,7 @@ public class YokeServer extends Verticle {
       // define middleware
       //app.use(new Favicon("img/favicon.png"));
       app.use(new Logger());
-      app.use(new BodyParser());
+      //app.use(new BodyParser());
       //app.use(new MethodOverride());
       // Create a new Router
       Router router = new Router();
@@ -83,24 +86,26 @@ public class YokeServer extends Verticle {
       router.post("/bitcoinmonitor_notify", new Handler<YokeRequest>() {
           @Override
           public void handle(final YokeRequest request) {
-              JsonObject data=((JsonObject)request.body()).getObject("signed_data");
-              String address=data.getString("address");
-              Number confirmations=data.getNumber("confirmations");
-              getContainer().logger().info("Bitmonitor notify for address:"+address
-                +" ["+confirmations+"]");
+              request.bodyHandler(new Handler<Buffer>() {
+                public void handle(Buffer body) {
+                      JsonObject data=(new JsonObject(body.toString())).getObject("signed_data");
+                      String address=data.getString("address");
+                      Number confirmations=data.getNumber("confirmations");
+                      getContainer().logger().info("Bitmonitor notify for address:"+address
+                        +" ["+confirmations+"]");
 
-              vertx.eventBus().send("splitter.split", data, new Handler<Message<JsonObject>>() {
-                  public void handle(Message<JsonObject> message) {
-                      if(message.body().getString("status").equals("ok")){
-                        request.response().end("*ok*");
-                      }else{
-                        request.response().setStatusCode(409);
-                        request.response().end(message.body().getString("status"));
-                      }
-                  }
-              });
-
-              
+                      vertx.eventBus().send("splitter.split", data, new Handler<Message<JsonObject>>() {
+                          public void handle(Message<JsonObject> message) {
+                              if(message.body().getString("status").equals("ok")){
+                                request.response().end("*ok*");
+                              }else{
+                                request.response().setStatusCode(409);
+                                request.response().end(message.body().getString("status"));
+                              }
+                          }
+                      });
+                    }
+                });
           }
       });
 
