@@ -198,7 +198,7 @@ function doSplit (message, replier) {
 	      var sendResp = body.toString()
 	      logger.info('sendResp :'+JSON.stringify(sendResp));
 	      
-	      if(sendResp.tx_hash){
+	      if(sendResp!=null){
 	      	return replier({
 		      status  : 'ok'
 		  	});
