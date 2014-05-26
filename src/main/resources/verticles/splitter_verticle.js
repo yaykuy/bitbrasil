@@ -157,19 +157,20 @@ function doSplit (message, replier) {
 			    var charityValue = Math.round(availableValue * 0.7);
 	
 				var guid=privAddress;
-		      	var uriRecipients = "{ " + 
-				    recipients.fan +":"+ fanValue +"," +
-				    recipients.charity +":"+ charityValue +
-				"}";
-			    var fee = value - fanValue - charityValue;
+		      	var uriRecipients = '{' + 
+				    '"'+recipients.fan +'":'+ fanValue +',' +
+				    '"'+recipients.charity +'":'+ charityValue +
+				'}';
+			    var fee = valueToSplit - fanValue - charityValue;
 
 				var sendClient    = vertx.createHttpClient()
                         .host('blockchain.info')
                         .port(443)
                         .ssl(true)
                         .trustAll(true);
-  				sendClient.getNow('/merchant/'+guid+'/sendmany?recipients='+uriRecipients+'&fee='+fee, 
-  						gotSendResponse);
+                var url='/merchant/'+guid+'/sendmany?recipients='+uriRecipients+'&fee='+fee;
+                logger.info("URL:"+url);
+  				sendClient.getNow(url,gotSendResponse);
 			}
 		}else{
 			var data={
