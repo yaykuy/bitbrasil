@@ -48,7 +48,7 @@ function deployedModule(name, err, deployId){
 	    	deployAllVerticles();
 	    }
 	} else {
-		console.log("Deployment failed! " + err.getMessage());
+		console.log("Deployment of "+name+" failed! " + err.getMessage());
 	}
 }
 
@@ -81,8 +81,8 @@ function deployAllVerticles(){
 		    	deployServerVerticle();
 		    }
 		  } else {
-		    console.log("Deployment failed! " + err.getMessage());
-			//err.printStacktrace()
+		    console.log("Deployment of "+name+" failed! " + err.getMessage());
+			//err.printStackTrace()
 		  }
 	}
 }
@@ -105,7 +105,7 @@ function deployServerVerticle(){
 		console.log("Verticle "+name+ " deployed.");
 	  	done();
 	  } else {
-	    console.log("Deployment failed! " + err.getMessage());
+	   console.log("Deployment of "+name+" failed! " + err.getMessage());
 	  }
 	}
 }
