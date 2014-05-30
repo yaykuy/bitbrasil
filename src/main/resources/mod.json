@@ -1,8 +1,8 @@
 {
-  "main": "app.js",
-  "includes": "com.jetdrone~yoke~1.0.15,com.jetdrone~yoke.engine.handlebars~1.0.15",
+  "main": "cl.yaykuy.bitbrasil.App",
+  "includes": "com.jetdrone~yoke~1.0.18,com.jetdrone~yoke.engine.handlebars~1.0.18",
 
-  "deploys" : "io.vertx~lang-rhino~2.0.0-final,io.vertx~mod-mongo-persistor~2.0.0-final,io.vertx~lang-groovy~2.0.0-final,cl.yaykuy~mandrill~0.0.1-rc1",
+  "deploys" : "io.vertx~lang-rhino~2.1.1,io.vertx~lang-js~1.1.0,io.vertx~mod-mongo-persistor~2.0.0-final,io.vertx~lang-groovy~2.0.0-final,cl.yaykuy~mandrill~0.0.1-rc1,cl.yaykuy~loader~0.0.2",
   
   "auto-redeploy": true
 }

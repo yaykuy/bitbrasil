@@ -1,2 +1,5 @@
 src/main/resources
-src/main/java
+bin
+out/production/bitbrasil
+out/test/bitbrasil
+build/deps
