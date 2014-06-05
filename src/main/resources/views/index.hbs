@@ -1,41 +1,12 @@
-<!DOCTYPE html>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width,initial-scale=1.0" />
-    
-    <!-- commented, remove this line to use IE & iOS favicons -->           
-    <link rel="shortcut icon" href="img/favicon.ico" />     
-    <link rel="icon" type="image/png" href="img/favicon.png" />
-
-	<title>Bitcoin Brasil 2014</title>
-	
-    <!-- CSS STYLE -->
-    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="css/ddsmoothmenu.css" />
-    <link rel="stylesheet" type="text/css" href="css/circularCountdown.css" />		
-	<link rel='stylesheet' type="text/css" href="css/mqueries.css" id='mqueries-style-css' media='all' />
-	
-    <!-- jQuery-->
-    <script type="text/javascript" src="js/ddsmoothmenu.js"></script>	
-    <script type="text/javascript" src="js/jquery.min.js" tppabs="jquery.min.js"></script>
-    <script type="text/javascript" src="js/jquery-ui.min.js" tppabs="jquery-ui.min.js"></script>
-    <script type="text/javascript" src="js/circularCountdown.js"></script>
-
-     <!-- jQuery KenBurn Slider  -->	
-	<script type="text/javascript" src="js/rs-plugin/jquery.themepunch.plugins.min.js"></script>			
-    <script type="text/javascript" src="js/rs-plugin/jquery.themepunch.revolution.min.js"></script>			
-	
-	
-	<!-- MODULES ONLY FOR THE DEMONSTATION -->
-	<script type="text/javascript" src="js/rs-plugin/jquery-ui-1.8.21.custom.min.js"></script>		
-	<script type="text/javascript" src="js/previewjs/preview-fullwidth.js"></script>		
-		
-	<!-- REVOLUTION BANNER CSS SETTINGS -->
-	<link rel="stylesheet" type="text/css" href="css/rs-plugin/settings.css" media="screen" />	
-	
-	<!-- GOOGLE FONTS -->
-	<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Donation Cup</title>
+<!-- Google fonts -->
+<link href='http://fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Tienne:400,700,900' rel='stylesheet' type='text/css'>
+<link rel='stylesheet' href='css/style.css'>
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -43,156 +14,24 @@
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-39856000-1', 'solutionsdesign.com.ar');
+  ga('create', 'UA-50183509-1', 'bitcoinbrasil2014.com');
   ga('send', 'pageview');
 
 </script>
 
 <style type="text/css">  
   /* al DIV contenedor lo centramos centramos y dimensionamos */
-  #imagen1 {
-    cursor: pointer;  
-    width: 175px; 
-	height:175px;
-	margin: 0 auto; 
-	text-align:center;
-	margin-top:0px;
-	position:relative;
-	float:left;
-	margin-right:10px;
-	padding-bottom:10px;  
-    /* y acá, colocamos la segunda imagen como fondo */
-    background: transparent url(img/codigoQR-hover.png) no-repeat left top;
-  }  
-  /* a la etiqueta IMG interna, le agregamos el efecto y la transición */
-  #imagen1 img {
-    -moz-transition: opacity 1s;
-    -webkit-transition: opacity 1s;
-    -o-transition: opacity 1s;
-    transition: opacity 1s;
-    opacity: 1;
-    /* agreamos el filtro para que en IE8 funcione aunque no sea animado */
-    filter:alpha(opacity=100);
-  }
-  /* al poner el cursor encima, la imagen se oculta así que lo que veremos es el fondo de la segunda imagen */
-  #imagen1:hover img {
-    opacity:0;
-    filter:alpha(opacity=0);
-  }
-</style>
-
-<style type="text/css">  
-  /* al DIV contenedor lo centramos centramos y dimensionamos */
-  #imagen2 {
-    cursor: pointer;  
-    width: 175px; 
-	height:175px;
-	margin: 0 auto; 
-	text-align:center;
-	margin-top:0px;
-	position:relative;
-	float:left;
-	margin-right:10px;
-	padding-bottom:10px;  
-    /* y acá, colocamos la segunda imagen como fondo */
-    background: transparent url(img/donatenow_home-hover.png) no-repeat left top;
-  }  
-  /* a la etiqueta IMG interna, le agregamos el efecto y la transición */
-  #imagen2 img {
-    -moz-transition: opacity 1s;
-    -webkit-transition: opacity 1s;
-    -o-transition: opacity 1s;
-    transition: opacity 1s;
-    opacity: 1;
-    /* agreamos el filtro para que en IE8 funcione aunque no sea animado */
-    filter:alpha(opacity=100);
-  }
-  /* al poner el cursor encima, la imagen se oculta así que lo que veremos es el fondo de la segunda imagen */
-  #imagen2:hover img {
-    opacity:0;
-    filter:alpha(opacity=0);
-  }
-</style>
-
-<style type="text/css">  
-  /* al DIV contenedor lo centramos centramos y dimensionamos */
-  #imagen3 {
-    cursor: pointer;  
-    width: 175px; 
-	height:175px;
-	margin: 0 auto; 
-	text-align:center;
-	margin-top:0px;
-	position:relative;
-	float:left;
-	margin-right:10px;
-	padding-bottom:10px;  
-    /* y acá, colocamos la segunda imagen como fondo */
-    background: transparent url(img/NGO_home-hover.png) no-repeat left top;
-  }  
-  /* a la etiqueta IMG interna, le agregamos el efecto y la transición */
-  #imagen3 img {
-    -moz-transition: opacity 1s;
-    -webkit-transition: opacity 1s;
-    -o-transition: opacity 1s;
-    transition: opacity 1s;
-    opacity: 1;
-    /* agreamos el filtro para que en IE8 funcione aunque no sea animado */
-    filter:alpha(opacity=100);
-  }
-  /* al poner el cursor encima, la imagen se oculta así que lo que veremos es el fondo de la segunda imagen */
-  #imagen3:hover img {
-    opacity:0;
-    filter:alpha(opacity=0);
-  }
-</style>
-
-<style type="text/css">  
-  /* al DIV contenedor lo centramos centramos y dimensionamos */
-  #imagen4 {
-    cursor: pointer;  
-    width: 175px; 
-	height:175px;
-	margin: 0 auto; 
-	text-align:center;
-	margin-top:0px;
-	position:relative;
-	float:left;
-	margin-right:10px;
-	padding-bottom:10px;  
-    /* y acá, colocamos la segunda imagen como fondo */
-    background: transparent url(img/brasil_bitcoin_places_home-hover.png) no-repeat left top;
-  }  
-  /* a la etiqueta IMG interna, le agregamos el efecto y la transición */
-  #imagen4 img {
-    -moz-transition: opacity 1s;
-    -webkit-transition: opacity 1s;
-    -o-transition: opacity 1s;
-    transition: opacity 1s;
-    opacity: 1;
-    /* agreamos el filtro para que en IE8 funcione aunque no sea animado */
-    filter:alpha(opacity=100);
-  }
-  /* al poner el cursor encima, la imagen se oculta así que lo que veremos es el fondo de la segunda imagen */
-  #imagen4:hover img {
-    opacity:0;
-    filter:alpha(opacity=0);
-  }
-</style>
-
-<style type="text/css">  
-  /* al DIV contenedor lo centramos centramos y dimensionamos */
   #imagen5 {
     cursor: pointer;  
     width: 330px; 
-	height:110px;
-	margin: 0 auto; 
-	text-align:center;
-	margin-top:0px;
-	position:relative;
-	float:left;
-	margin-right:10px;
-	padding-bottom:10px;  
+  height:110px;
+  margin: 0 auto; 
+  text-align:center;
+  margin-top:0px;
+  position:relative;
+  float:left;
+  margin-right:10px;
+  padding-bottom:10px;  
     /* y acá, colocamos la segunda imagen como fondo */
     background: transparent url(img/bitcoiner-hover.png) no-repeat left top;
   }  
@@ -218,14 +57,14 @@
   #imagen6 {
     cursor: pointer;  
     width: 330px; 
-	height:110px;
-	margin: 0 auto; 
-	text-align:center;
-	margin-top:0px;
-	position:relative;
-	float:left;
-	margin-right:10px;
-	padding-bottom:10px;  
+  height:110px;
+  margin: 0 auto; 
+  text-align:center;
+  margin-top:0px;
+  position:relative;
+  float:left;
+  margin-right:10px;
+  padding-bottom:10px;  
     /* y acá, colocamos la segunda imagen como fondo */
     background: transparent url(img/github-hover.png) no-repeat left top;
   }  
@@ -251,14 +90,14 @@
   #imagen7 {
     cursor: pointer;  
     width: 330px; 
-	height:110px;
-	margin: 0 auto; 
-	text-align:center;
-	margin-top:0px;
-	position:relative;
-	float:left;
-	margin-right:10px;
-	padding-bottom:10px;  
+  height:110px;
+  margin: 0 auto; 
+  text-align:center;
+  margin-top:0px;
+  position:relative;
+  float:left;
+  margin-right:10px;
+  padding-bottom:10px;  
     /* y acá, colocamos la segunda imagen como fondo */
     background: transparent url(img/company-hover.png) no-repeat left top;
   }  
@@ -279,273 +118,110 @@
   }
 </style>
 
-<style>
-
-    html { overflow-x: hidden; }
-    h2 { 
-	font-family: 'Ubuntu', sans-serif;
-	font-size:35px;
-    background: #fdc91d;
-    color: #248643;
-    padding: 15px 0;
-    position: relative;
-	text-align:center;
-    }
-    h2:before, h2:after {
-      content: "";
-      background: #fdc91d;
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      width: 9999px;
-    }
-    h2:before {
-      right: 100%;
-    }
-    h2:after {
-      left: 100%;
-    }
-    
-    h2:nth-of-type(1), h2:nth-of-type(1):before, h2:nth-of-type(1):after { background: #fdc91d; }
-    h2:nth-of-type(2), h2:nth-of-type(2):before, h2:nth-of-type(2):after { background: #fdc91d; }
-    h2:nth-of-type(3), h2:nth-of-type(3):before, h2:nth-of-type(3):after { background: #fdc91d; }
-    
-    .left-only:after {
-      display: none;
-    }
-    
-    .right-only:before {
-      width: 20px;
-    }
-    	
-	</style>
-    
-<script>
-		jQuery(function() {
-
-			jQuery('#circularCountdown_v1').circularCountdown({
-				pluginFontFamily:"'Ubuntu', sans-serif",
-				circleRadius:12,
-				circleLineWidth:10,
-				behindCircleLineWidthExpand:0,
-				circleTopBottomPadding:10,
-				circleLeftRightPadding:25,					
-				numberAdditionalTopPadding:1,
-				textMarginTop:0,
-				textPadding:15,
-				lineSeparatorImg:'img/circular_countdown_images/line2.png',
-				
-				allCirclesTopMargin:0,
-
-				divBackgroundDays:"img/circular_countdown_images/transparentBG_60.png",
-				borderTopColorDays:"",
-				borderRightColorDays:"#fdc91d",
-				borderBottomColorDays:"",
-				borderLeftColorDays:"",    				
-				circleColorDays: "#fdc91d",
-				circleAlphaDays: 0,
-				behindCircleColorDays: "#fdc91d",
-				behindCircleAlphaDays: 0,
-				numberColorDays: "#fdc91d",			
-				textColorDays: "#fdc91d",
-				textColorBackgroundDays: "img/circular_countdown_images/transparentBG_60.png",
-				
-				divBackgroundHours:"img/circular_countdown_images/transparentBG_60.png",
-				borderTopColorHours:"",
-				borderRightColorHours:"#fdc91d",
-				borderBottomColorHours:"",
-				borderLeftColorHours:"#fdc91d",    				
-				circleColorHours: "#fdc91d",
-				circleAlphaHours: 0,
-				behindCircleColorHours: "#fdc91d",
-				behindCircleAlphaHours: 0,		
-				numberColorHours: "#fdc91d",
-				textColorHours: "#fdc91d",
-				textColorBackgroundHours: "img/circular_countdown_images/transparentBG_60.png",		
-				
-				divBackgroundMinutes:"img/circular_countdown_images/transparentBG_60.png",
-				borderTopColorMinutes:"",
-				borderRightColorMinutes:"#fdc91d",
-				borderBottomColorMinutes:"",
-				borderLeftColorMinutes:"#fdc91d",				
-				circleColorMinutes: "#fdc91d",
-				circleAlphaMinutes: 0,
-				behindCircleColorMinutes: "#fdc91d",
-				behindCircleAlphaMinutes: 0,
-				numberColorMinutes: "#fdc91d",
-				textColorMinutes: "#fdc91d",
-				textColorBackgroundMinutes: "img/circular_countdown_images/transparentBG_60.png",	
-				
-				divBackgroundSeconds:"img/circular_countdown_images/transparentBG_60.png",
-				borderTopColorSeconds:"",
-				borderRightColorSeconds:"",
-				borderBottomColorSeconds:"",
-				borderLeftColorSeconds:"#fdc91d",
-				circleColorSeconds: "#fdc91d",
-				circleAlphaSeconds: 0,
-				behindCircleColorSeconds: "#fdc91d",
-				behindCircleAlphaSeconds: 0,
-				numberColorSeconds: "#fdc91d",
-				textColorSeconds: "#fdc91d",
-				textColorBackgroundSeconds: "img/circular_countdown_images/transparentBG_60.png",
-				
-				h2Size:22,
-				h2Color:'#fdc91d',
-
-				h4Color:'#fdc91d',						
-				
-				beginDate:'2013,5,19,22,30,10', //year,month,day,hour,minute,second
-				launchingDate:'2014,06,12,17,00,00',  //year,month,day,hour,minute,second
-				complete:function() { alert( 'Done!' ); window.open("http://www.google.com","_blank") }
-			});		
-			
-			
-		});
-	</script>       
 </head>
 
+<body>
+<div class="tiraverde">
+    <div class="QR">
+    <img src="img/codigo_QR_tecnofields.png" width="175" height="175" /> </div>
+        <div class="donation">
+    DONATION CUP
+        </div>
+        <div class="support">
+    Support a fan, help a NGO, have fun with <strong><em>bitcoin!</em></strong>
+        </div>
+        <div class="downsupport">
+        Send btc and track your donation in real-time.
+        </div>
+  <div id="botondonate">
+        <a href="img/download-QR.php" target="_blank">Donate now</a> 
+        </div>
+        
+<div id="titulobox">
+3 ways to join the fun
+</div>
+</div>
 
-
-<!--
-#######################################
-	- THE BODY PART -
-######################################
--->
-<body class="body-dark">		
-<div id="bgd-logo">
-<div id="page-wraplogo"> <a href="index.php"><img src="img/logo-web.png" width="178" height="113"/></a>	
+<div id="contenedordeboxes">
+<div id="innerboxes">
+<div id="contenedordeboxizquierda">
+<div id="tituloboxizquierda">
+GET A FREE POSTER</br>
+Show it on the Media
 </div>
+<div id="imgbox"> <a href="mmailto:beto@bitpay.com" target="_blank"><img src="img/codigoQR.png" width="231" height="231" /></a>
 </div>
-<div id="tiraamarilla">
-{{> _menu}}
-</div>	
+<div id="contenidoboxizquierda">
+  <p><strong>How:</strong></br>
+  <p>Pick up the QR at <a href="map.php" target="_blank">ZE GORDO BAR</a></br>
+    <span jsl="$x 8;">Rua Clodomiro Amazonas, 321 </span> - Itaim Bibi - São Paulo - Brazil.</p>
 </div>
-								
-<!-- INICIO HOME (SLIDER) -->
-<div class="fullwidthbanner-container">					
-<div class="fullwidthbanner">
-<ul>
-
-<!-- SLIDE 1 -->
-<li data-transition="fade" data-slotamount="4"> 										
-<img src="img/slides/slide1.png" />								
-</li>
-
-<!-- SLIDE 2 -->
-<li data-transition="slideup" data-slotamount="4"> 										
-<img src="img/slides/slide2.png" />								
-</li>
-							
-<!-- SLIDE 3 -->
-<li data-transition="slideright" data-slotamount="4" > 
-<img src="img/slides/slide3.png"/>	
-</li>															
-</ul>													
-</div>					
+<div id="contenidoboxizquierda">
+  <p><strong>What to do:</strong> </p>
+  <p>Show your poster - Take pictures with others Fans outside the stadium -
+    Take pictures at bars.</p>
 </div>
-</section><!-- END .section-inner -->          	
-<!-- FIN DE HOME (SLIDER) -->
+<div id="contenidoboxizquierda">
+<strong>Add your e-mail and get your poster.</strong> 
 </div>
-                
-<div id="tiraamarilla">
-<div id="circularCountdown_v1">
-                <div class="theCircles group">
-                    <div class="daysDiv">	
-                        <canvas class="canvasDays"></canvas>
-                        <div class="innerNumber">0</div>
-                        <div class="innerText">DAYS</div>
-                    </div>
-                    <div class="hoursDiv">	
-                        <canvas class="canvasHours"></canvas>
-                        <div class="innerNumber">0</div>
-                        <div class="innerText">HOURS</div>
-                    </div>
-                    <div class="minutesDiv">
-                        <canvas class="canvasMinutes"></canvas>
-                        <div class="innerNumber">0</div>
-                        <div class="innerText">MINUTES</div>
-                    </div>
-                    <div class="secondsDiv">	
-                        <canvas class="canvasSeconds"></canvas>
-                        <div class="innerNumber">0</div>
-                        <div class="innerText">SECONDS</div>
-                    </div>
-               </div>
+<div id="botonboxizquierda">
+<strong><a href="mailto:beto@bitpay.com" target="_blank">SEND AN EMAIL</a></strong> 
 </div> 
-</div>		
-
-<div id="tiraamarilla">
-<p>BEGINNING FOR WORLD CUP</p>
-<p>
 </div>
 
-<div class="tiragris">
-<div class="text">
-HELP A FAN
+<div id="contenedordeboxmedio">
+<div id="tituloboxmedio">
+PRINT YOUR  QR</br>
+Help a Charity. </div>
+<div id="imgbox"> <a href="download-QR.php" target="_blank"><img src="img/register-your-charity.png" width="231" height="231" /></a>
 </div>
-
-<div class="subtext">
-Donate to a charity
+<div id="contenidoboxmedio">
+  <p><strong>How:</strong></br>
+  </p>
+  <p>Add your Wallet get your QR - Help and NGO, Have fun using bitcoin. (30% YOU / 70% NGO). Track your donation.</p>
 </div>
-
-<div class="loguito">
-<img src="img/btn-donate-now.png" width="141" height="52" /> 
+<div id="contenidoboxmedio">
+  <p><strong>What to do:</strong></br>
+    </p>
+  <p>Print it wherever you want
+    and then Post Pictures ! #DONATIONCUP TW-FB-YT </p>
 </div>
+<div id="contenidoboxmedio">
+<strong><span id="result_box" lang="en" xml:lang="en">Show your QR and choose the Charity</span>.</strong> 
 </div>
-
-<div class="contentbanners">
-<div class="contbanners">
-<div id="imagen1">
-<img src="img/codigoQR.png" width="175" height="175" /> 
-</div>
-<div id="imagen2">
-<img src="img/donatenow_home.png" width="175" height="175" /> 
-</div>
-<div id="imagen3">
-<img src="img/NGO_home.png" width="175" height="175" /> 
-</div>
-<div id="imagen4">
-<img src="img/brasil_bitcoin_places_home.png" width="175" height="175" /> 
-</div>
+<div id="botonboxizquierda">
+<strong><a href="download-QR.php" target="_blank">TRACK YOUR DONATION</a></strong> 
 </div>
 </div>
 
-<div id="tiragris">
-<div id="tiracampaign">
-<p>CAMPAIGN</p>
+<div id="contenedordeboxderecha">
+<div id="tituloboxizquierda">
+MEETUP AT A LOCAL BAR</br>
+Receive Bitcoins
 </div>
-<div id="page-wrap">		
-	  <p>Through this Bitcoin community donation program, you can help the important work of charities, scanning the QR code from a Fan in Brazil 2014 and give to a soccer FAN the possibility to win a free meal!</br></br>
-
-Select a charity that you want to help and make your donation.</br></br></br>
-
- 
-
-<strong>Things to know.</strong></br>
-
-30 % of your donation goes to a FAN who is going to hold the QR code in brasil2014, and 70% goes to a Charity.</br></br>
-
-<strong>Important things for charities:</strong></br>
-
-Additional Funds</br>
-
-Revenue stream through bitcoin for your programs.</br>
-
-Expand your donor base register your Charity now!.</br></br></br>
-
- 
-
-<strong>Help national and global causes.</strong></br>
-
-<strong>Track your donation.</strong></br></br></br>
-
- 
-
-Touch the lives of those in need…</p>
+<div id="imgbox"> <a href="Bars.php"><img src="img/coolplaces.png" width="231" height="231" /></a>
+</div>
+<div id="contenidoboxderecha">
+  <p><strong>How:</strong></br>
+    </p>
+  <p>During some games, promoters will give away
+    Bitcoin to everyone who takes pictures with the
+    Donation CUP poster.</p>
+</div>
+<div id="contenidoboxderecha">  
+  <p><strong>Lets do it !</strong></br></p>
+  Pay with bitcoin at best local bars. </br>
+  Get a discount using BTC!</p>
+</div>
+<div id="contenidoboxderecha">
+<strong>Cool Places to meet the bitcoin community.</strong> 
+</div>
+<div id="botonboxizquierda">
+<strong><a href="Bars.php" target="_blank">READ BARS</a></strong> 
 </div>
 </div>
-
-<div class="spacer spacer-big"></div>
+</div>
+</div>
 
 <div class="contentbanners3">
 <div class="contbanners3">
@@ -559,65 +235,23 @@ Touch the lives of those in need…</p>
 <img src="img/company.png" width="330" height="110" /> 
 </div>
 </div>
-</div>            
-		
-<div id="footer">
-- Bitcoin Brasil all right reserved - HELP A FAN -
-</div>		
+</div>
 
-			<!--
-			##############################
-			 - ACTIVATE THE BANNER HERE -
-			##############################
-			-->
-			<script type="text/javascript">
-								
-				var tpj=jQuery;
-				tpj.noConflict();
-				
-				tpj(document).ready(function() {
-				
-				if (tpj.fn.cssOriginal!=undefined)
-					tpj.fn.css = tpj.fn.cssOriginal;
+<div class="tiragris">
+<div class="wraptiragris">
+<div class="imgtiragris">
+<img src="img/mr-bitcoin-banner.png" width="123" height="127" />
+</div>
+<div class="texttiragris">
+Join Mr. Bitcoin around the World Cup.
+<div class="bigtexttiragris"><strong>Help the world, have fun with me!</strong>
+</div>
+</div>
+</div>
+<div id="botondonatedown">
+<a href="Mrbitcoin-QR.php" target="_blank">Donate now</a> 
+</div>
+</div>
 
-					tpj('.fullwidthbanner').revolution(
-						{	
-							delay:9000,												
-							startwidth:890,
-							startheight:450,
-							
-							onHoverStop:"off",						// Stop Banner Timet at Hover on Slide on/off
-							
-							thumbWidth:100,							// Thumb With and Height and Amount (only if navigation Tyope set to thumb !)
-							thumbHeight:50,
-							thumbAmount:4,
-							
-							hideThumbs:200,
-							navigationType:"both",					//bullet, thumb, none, both	 (No Shadow in Fullwidth Version !)
-							navigationArrows:"verticalcentered",		//nexttobullets, verticalcentered, none
-							navigationStyle:"square",				//round,square,navbar
-							
-							touchenabled:"on",						// Enable Swipe Function : on/off
-							
-							navOffsetHorizontal:0,
-							navOffsetVertical:30,
-							
-							fullWidth:"on",
-							
-							shadow:0								//0 = no Shadow, 1,2,3 = 3 Different Art of Shadows -  (No Shadow in Fullwidth Version !)
-														
-						});	
-					
-					
-					
-						
-			});
-			</script>
-		
-	
-    
-
-	</body>
-
-
-		
+</body>
+</html>
