@@ -11,7 +11,7 @@
 background: none repeat scroll 0% 0% #28C3AB;
 position: absolute;
 left: 0px;
-margin-top: -100px;
+margin-top: 100px;
 width: 100%;
 z-index: 100;
 }
@@ -25,11 +25,11 @@ width: 100%;
 z-index: 100;
 }
 
-.tiragris-map {
-background: #28C3AB;
+.tiragris-coolplaces {
+background: none repeat scroll 0% 0% #28C3AB;
 position: absolute;
-left: 0;
-margin-top: 840px;
+left: 0px;
+margin-top: 80px;
 width: 100%;
 z-index: 100;
 }
@@ -48,10 +48,11 @@ padding-bottom:25px;
 text-shadow:0px 0px 1px #A5EDE2;	
 }
 
-.map{
+#map{
 width:100%;
-height:500px;
-margin-top:330px;
+height:250px;
+margin-top:50px;
+margin-bottom:80px;
 text-align:center;
 z-index: 100;
 position: absolute;
@@ -67,6 +68,12 @@ text-align:center;
 #imgQRB{
 width:100%;
 margin-top:155px;
+text-align:center;
+}
+
+#imgQR{
+width:100%;
+margin-top:600px;
 text-align:center;
 }
 
@@ -283,7 +290,7 @@ text-shadow:0px 0px 1px #fff;
 
 #titulobox{
 font-family: 'Ubuntu', sans-serif;
-font-size:29px;
+font-size:39px;
 color:#444;
 font-weight:lighter;
 position:relative;
@@ -304,7 +311,172 @@ top:90px;
 }
 
 #contenedordeboxes{
-margin: 710px auto 0px;
+margin: 790px auto 0px;
+position: relative;
+text-align: center;
+width:100%;
+}
+
+#contenedordecoolplaces{
+margin: 9px auto 0px;
+position: relative;
+text-align: center;
+width:100%;
+}
+
+#separaciondelogocoolplaces{
+height:200px;
+width:100%
+background:#fff;
+border-bottom:1px solid #e9e9e9	
+}
+
+#contenedordemenucoolplaces{
+margin: 30px auto 0px;
+position: relative;
+text-align: center;
+width:80%;
+padding-top:220px;
+}
+
+#menucoolplaces{
+	
+}
+
+#logodecoolplaces{
+margin: 0 auto;
+position: relative;
+text-align: center;
+width:80%;
+margin-top:140px;
+}
+
+#titulodecoolplaces{
+font-family: 'Ubuntu', sans-serif;
+font-size:17px;
+color:#444;
+margin: 0px auto 0px;
+position: relative;
+text-align: center;
+width:80%;
+}
+
+#subtitulodecoolplaces{
+font-family: 'Ubuntu', sans-serif;
+font-size:19px;
+color:#444;
+font-weight:lighter;
+margin: 29px auto 0px;
+position: relative;
+text-align: center;
+width:80%;
+}
+
+#paisdecoolplaces{
+font-family: 'Ubuntu', sans-serif;
+font-size:18px;
+color:#444;
+font-weight:lighter;
+margin: 6px auto 0px;
+position: relative;
+text-align: center;
+width:80%;
+}
+
+
+#telefonodecoolplaces{
+font-family: 'Ubuntu', sans-serif;
+font-size:19px;
+color:#666;
+font-weight:lighter;
+margin: 16px auto 0px;
+position: relative;
+text-align: center;
+width:80%;
+}
+
+#emaildecoolplaces{
+font-family: 'Ubuntu', sans-serif;
+font-size:15px;
+color:#444;
+letter-spacing:-0.9px;
+margin: 30px auto 0px;
+position: relative;
+text-align: center;
+width:20%;
+
+}
+
+#emaildecoolplaces a{
+font-family: 'Ubuntu', sans-serif;
+font-size:15px;
+color:#444;
+margin: 30px auto 0px;
+position: relative;
+text-align: center;
+text-decoration:none;
+width:20%;
+border-radius:4px;
+border-color: #e9e9e9;
+transition: all 0.3s cubic-bezier(0.42, 0, 0.58, 1) 0;
+transition: all 500ms ease-in 0s;
+}
+
+#emaildecoolplaces a:hover{
+font-family: 'Ubuntu', sans-serif;
+font-size:15px;
+color:#28C3AB;
+margin: 30px auto 0px;
+position: relative;
+text-align: center;
+text-decoration:none;
+width:20%;
+transition: all 0.3s cubic-bezier(0.42, 0, 0.58, 1) 0;
+transition: all 500ms ease-in 0s;
+}
+
+#websitedecoolplaces{
+font-family: 'Ubuntu', sans-serif;
+font-size:16px;
+color:#444;
+letter-spacing:-0.9px;
+margin: 10px auto 0px;
+position: relative;
+text-align: center;
+width:20%;
+
+}
+
+#websitedecoolplaces a{
+font-family: 'Ubuntu', sans-serif;
+font-size:16px;
+color:#444;
+margin: 10px auto 0px;
+position: relative;
+text-align: center;
+text-decoration:none;
+width:20%;
+border-radius:4px;
+border-color: #e9e9e9;
+transition: all 0.3s cubic-bezier(0.42, 0, 0.58, 1) 0;
+transition: all 500ms ease-in 0s;
+}
+
+#websitedecoolplaces a:hover{
+font-family: 'Ubuntu', sans-serif;
+font-size:16px;
+color:#28C3AB;
+margin: 10px auto 0px;
+position: relative;
+text-align: center;
+text-decoration:none;
+width:20%;
+transition: all 0.3s cubic-bezier(0.42, 0, 0.58, 1) 0;
+transition: all 500ms ease-in 0s;
+}
+
+#contenedordeboxesmap{
+margin: 290px auto 0px;
 position: relative;
 text-align: center;
 width:100%;
@@ -481,18 +653,22 @@ transition: all 500ms ease-in 0s;
 }
 
 .contentbanners3{
-margin: 90px auto 200px;
+margin: 90px auto -80px;
 position: relative;
 display: inline-block;
 width: 100%;
 text-align: center;
+height:auto;
+max-width: 100%;
 }
 
 .contbanners3{
 margin:0 auto;
 position:relative;
 display:inline-block;
-text-align:center;	
+text-align:center;
+height:auto;
+min-width:30%;	
 }
 
 #contenedordecolumnas{
@@ -534,7 +710,7 @@ float:left;
 
 #columnatres{
 width: 60%;
-margin: 8px auto;
+margin: 0px auto;
 float: left;
 text-align:left;	
 }
@@ -547,5 +723,61 @@ float:right;
 }
 
 #wrapdecolumnadown{
-width:40%;	
+width:100%;	
+}
+
+#linea{
+height:50px;
+margin:0 auto;
+border-bottom:1px solid #f9f9f9;	
+}
+
+#contenedordebotones{
+width: 600px;
+margin: 0 auto;	
+margin-top:590px;	
+}
+
+#contenedordeiframe{
+width:80%;
+margin:0 auto;
+height:40px;
+position:relative;
+margin-top:50px;	
+}
+
+#wrapdebotones{
+width:200px;
+margin:0 auto;
+margin-top:0px;	
+}
+
+#botones{
+width:100%;
+float:left;	
+}
+
+#botones a{
+font-family: 'Ubuntu', sans-serif;
+font-size: 18px;
+color: #444;
+margin:0 auto;
+border:1px solid #e9e9e9;
+background: #fff;
+padding:10px;
+text-decoration:none;
+transition: all 0.3s cubic-bezier(0.42, 0, 0.58, 1) 0;
+transition: all 500ms ease-in 0s;
+}
+
+#botones a:hover{
+font-family: 'Ubuntu', sans-serif;
+font-size: 18px;
+color: #fff;
+margin:0 auto;
+padding:10px;
+border:1px solid #28C3AB;
+background: #28C3AB;
+transition: all 0.3s cubic-bezier(0.42, 0, 0.58, 1) 0;
+transition: all 500ms ease-in 0s;
 }

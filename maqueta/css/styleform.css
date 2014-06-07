@@ -1,0 +1,89 @@
+/* Estilos del formulario */
+label {
+    display:block;
+    margin-top:30px;
+    letter-spacing:1px;
+}
+.formulario {
+	padding-top:20px;
+    display:block;
+    margin:0 auto;
+    width:510px;
+    color: #222937;
+    font-family: 'Tienne', serif;
+	font-size: 1em;
+	font-size:12.5px;
+	text-align:center;
+}
+form {
+    margin:0 auto;
+    width:500px;
+}
+ 
+input, textarea {
+	font-family: 'Tienne', serif;
+    width:480px;
+    height:27px;
+    border:1px solid #F5F5F5;
+    padding:10px;
+    margin-top:5px;
+    font-size:12.5px;
+    color:#293145;
+	background-color:#fff;
+	text-align:center;
+}
+
+select{
+	font-family: 'Tienne', serif;
+    width:500px;
+    height:39px;
+    border:1px solid #F5F5F5;
+    padding:10px;
+    margin-top:5px;
+    font-size:12.5px;
+    color:#293145;
+	background-color:#fff;
+	text-align:left;
+}
+
+option{
+	font-family: 'Tienne',serif;
+	width: 450px;
+	height: 21px;
+	border-bottom: 1px solid #F5F5F5;
+	padding: 8px;
+	margin-top: 0px;
+	font-size: 12.5px;
+	color: #293145;
+	background-color: #FFF;
+	text-align: left;
+}
+ 
+textarea {
+    height:150px;
+}
+ 
+#submit {
+	font-family: 'Tienne', serif;
+	font-size: 1em;
+	color:#F5F5F5;
+    width:85px;
+    height:45px;
+    border:none;
+    margin-top:20px;
+    cursor:pointer;
+    background-color:#222937;	
+}
+
+#submit:hover {
+	font-family: 'Tienne', serif;
+	font-size: 1em;
+	color:#ccc2a8;
+    width:85px;
+    height:45px;
+    border:none;
+    margin-top:20px;
+    cursor:pointer;
+    background-color:#11141C;	
+}
+

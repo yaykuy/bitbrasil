@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Donation Cup - Download QR</title>
+<title>Donation Mr Bitcoin</title>
 <!-- Google fonts -->
 <link href='http://fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Tienne:400,700,900' rel='stylesheet' type='text/css'>
@@ -154,7 +154,9 @@ Link Wallet
 <img src="mr-bitcoin-banner.png" width="123" height="127" />
 </div>
 <div class="texttiragris">
-Join Mr. Bitcoin around the World Cup.
+Meet Mr. Bitcoin in Brazil.
+
+
 <div class="bigtexttiragris"><strong>Help the world, have fun with me!</strong>
 </div>
 </div>

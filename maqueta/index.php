@@ -118,6 +118,39 @@
   }
 </style>
 
+<style type="text/css">  
+  /* al DIV contenedor lo centramos centramos y dimensionamos */
+  #imagen8 {
+    cursor: pointer;  
+    width: 330px; 
+	height:110px;
+	margin: 0 auto; 
+	text-align:center;
+	margin-top:0px;
+	position:relative;
+	float:left;
+	margin-right:10px;
+	padding-bottom:10px;  
+    /* y acá, colocamos la segunda imagen como fondo */
+    background: transparent url(notabitcoineryet-hover.png) no-repeat left top;
+  }  
+  /* a la etiqueta IMG interna, le agregamos el efecto y la transición */
+  #imagen8 img {
+    -moz-transition: opacity 1s;
+    -webkit-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+    opacity: 1;
+    /* agreamos el filtro para que en IE8 funcione aunque no sea animado */
+    filter:alpha(opacity=100);
+  }
+  /* al poner el cursor encima, la imagen se oculta así que lo que veremos es el fondo de la segunda imagen */
+  #imagen8:hover img {
+    opacity:0;
+    filter:alpha(opacity=0);
+  }
+</style>
+
 </head>
 
 <body>
@@ -128,13 +161,13 @@
 		DONATION CUP
         </div>
         <div class="support">
-		Support a fan, help a NGO, have fun with <strong><em>bitcoin!</em></strong>
+		Support a fan, help a charity, have fun with <strong><em>bitcoin!</em></strong>
         </div>
         <div class="downsupport">
         Send btc and track your donation in real-time.
         </div>
   <div id="botondonate">
-        <a href="download-QR.php" target="_blank">Donate now</a> 
+        <a href="donation-tracking.php" target="_blank">JOIN THE FUN</a> 
         </div>
         
 <div id="titulobox">
@@ -145,79 +178,67 @@
 <div id="contenedordeboxes">
 <div id="innerboxes">
 <div id="contenedordeboxizquierda">
-<div id="tituloboxizquierda">
-GET A FREE POSTER</br>
-Show it on the Media
-</div>
-<div id="imgbox"> <a href="mmailto:beto@bitpay.com" target="_blank"><img src="codigoQR.png" width="231" height="231" /></a>
+<div id="imgbox"> <a href="form.php" target="_blank"><img src="codigoQR1.png" width="231" height="231" /></a>
 </div>
 <div id="contenidoboxizquierda">
   <p><strong>How:</strong></br>
-  <p>Pick up the QR at <a href="map.php" target="_blank">ZE GORDO BAR</a></br>
-    <span jsl="$x 8;">Rua Clodomiro Amazonas, 321 </span> - Itaim Bibi - São Paulo - Brazil.</p>
+  <p>Get your QR, you can pick it up at Local Bars or have it sent to you worldwide*.</p>
+  <p> @ Brazil:  Zé Gordo Bar</br>
+    <span jsl="$x 8;">Rua Clodomiro Amazonas, 321 </span> - Itaim Bibi - São Paulo.</p>
 </div>
 <div id="contenidoboxizquierda">
   <p><strong>What to do:</strong> </p>
   <p>Show your poster - Take pictures with others Fans outside the stadium -
-    Take pictures at bars.</p>
-</div>
-<div id="contenidoboxizquierda">
-<strong>Add your e-mail and get your poster.</strong> 
+    Take pictures at bars. </p>
+  <p>Post Pictures ! #DONATIONCUP Twitter, Facebook &amp; Youtube</p>
 </div>
 <div id="botonboxizquierda">
-<strong><a href="mailto:beto@bitpay.com" target="_blank">SEND AN EMAIL</a></strong> 
+  <strong><a href="form.php" target="_blank">FILL THE FORM</a></strong> 
 </div> 
 </div>
 
 <div id="contenedordeboxmedio">
-<div id="tituloboxmedio">
-PRINT YOUR  QR</br>
-Help a Charity. </div>
-<div id="imgbox"> <a href="download-QR.php" target="_blank"><img src="register-your-charity.png" width="231" height="231" /></a>
+<div id="imgbox"> <a href="donation-tracking.php" target="_blank"><img src="register-your-charity.png" width="231" height="231" /></a>
 </div>
 <div id="contenidoboxmedio">
   <p><strong>How:</strong></br>
   </p>
-  <p>Add your Wallet get your QR - Help and NGO, Have fun using bitcoin. (30% YOU / 70% NGO). Track your donation.</p>
+  <p>Support a fan and  help a charity, from what you donate 30% goes to a Fan and 70% goes to a charity, you can Track your donation in real-time.</p>
+  
+ <p> Help national and global causes.<br>
+  Touch the lives of those in need...</p>
 </div>
 <div id="contenidoboxmedio">
   <p><strong>What to do:</strong></br>
     </p>
-  <p>Print it wherever you want
-    and then Post Pictures ! #DONATIONCUP TW-FB-YT </p>
-</div>
-<div id="contenidoboxmedio">
-<strong><span id="result_box" lang="en" xml:lang="en">Show your QR and choose the Charity</span>.</strong> 
+  <p>Donors can choose to donate only to a charity. Select your favorite.</p>
+  <p>Enjoy the Most Transparent way to donate ever -Track your donations in realtime and  check who received your donation.</p>
 </div>
 <div id="botonboxizquierda">
-<strong><a href="download-QR.php" target="_blank">TRACK YOUR DONATION</a></strong> 
+  <strong><a href="donation-tracking.php" target="_blank">TRACK YOUR DONATION</a></strong> 
 </div>
 </div>
 
 <div id="contenedordeboxderecha">
-<div id="tituloboxizquierda">
-MEETUP AT A LOCAL BAR</br>
-Receive Bitcoins
-</div>
-<div id="imgbox"> <a href="Bars.php"><img src="coolplaces.png" width="231" height="231" /></a>
+<div id="imgbox"> <a href="coolplaces.php" target="_blank"><img src="Jointhefun.png" width="231" height="231" /></a>
 </div>
 <div id="contenidoboxderecha">
   <p><strong>How:</strong></br>
     </p>
   <p>During some games, promoters will give away
     Bitcoin to everyone who takes pictures with the
-    Donation CUP poster.</p>
+    Donation CUP Poster.</p>
+  <p> Have fun with Mr. Bitcoin at the best </br>
+  Bitcoin Bars in Brazil.</p>
 </div>
 <div id="contenidoboxderecha">  
   <p><strong>Lets do it !</strong></br></p>
-  Pay with bitcoin at best local bars. </br>
-  Get a discount using BTC!</p>
-</div>
-<div id="contenidoboxderecha">
-<strong>Cool Places to meet the bitcoin community.</strong> 
+   <p>Join us !. Argentina, Brazil, Chile, Colombia, Mexico - Pay with bitcoin at best local bars.</br>
+   Get a discount using BTC!</p>
+   </p>
 </div>
 <div id="botonboxizquierda">
-<strong><a href="Bars.php" target="_blank">READ BARS</a></strong> 
+  <strong><a href="coolplaces.php" target="_blank">VISIT COOLPLACES</a></strong> 
 </div>
 </div>
 </div>
@@ -231,8 +252,16 @@ Receive Bitcoins
 <div id="imagen6">
 <img src="github.png" width="330" height="110" /> 
 </div>
+</div>
+</div>
+
+<div class="contentbanners3">
+<div class="contbanners3">
 <div id="imagen7">
 <img src="company.png" width="330" height="110" /> 
+</div>
+<div id="imagen8">
+<img src="notabitcoineryet.png" width="330" height="110" /> 
 </div>
 </div>
 </div>
@@ -243,7 +272,7 @@ Receive Bitcoins
 <img src="mr-bitcoin-banner.png" width="123" height="127" />
 </div>
 <div class="texttiragris">
-Join Mr. Bitcoin around the World Cup.
+Meet Mr. Bitcoin in Brazil.
 <div class="bigtexttiragris"><strong>Help the world, have fun with me!</strong>
 </div>
 </div>
